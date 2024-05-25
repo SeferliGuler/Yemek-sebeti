@@ -1,0 +1,68 @@
+
+  {
+    "result":{
+    "menu1":{
+       
+        "name": "Paella",
+        "price": 19,
+        "content": "Meat, Potatoes, Rice,",
+        "url":"https://thumbs.dreamstime.com/b/seafood-paella-as-closeup-wrought-iron-pan-35125000.jpg"
+    }, 
+    "menu2":{
+        
+        "name": "Pad Thai",
+        "price": 30,
+        "content": "cabbage and seasonings like sugar",
+        "url": "https://143401902.cdn6.editmysite.com/uploads/1/4/3/4/143401902/s222380787276981528_p66_i1_w728.jpeg"
+    }, 
+    "menu3":{
+        
+        "name": "Moussaka",
+        "price": 79,
+        "content": " seasonings like sugar, salt, onions",
+        "url":"https://www.mygreekdish.com/wp-content/uploads/2013/05/Moussaka-recipe-Traditional-Greek-Moussaka-with-Eggplants.jpg"
+    }, 
+    "menu4":{
+     
+        "name": "Poutine",
+        "price": 28,
+        "content": " french fries topped with cheese ",
+        "url": "https://www.seriouseats.com/thmb/DaO3BDJcmPYWOMzoUMxabvSzHPs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2012__03__20120403-199590-GFTues-Poutine-Recipes-a569a08a2d8a4b6f99b37c86e0715a34.jpg"
+    }, 
+    "menu5":{
+       
+        "name": "Kimchi",
+        "price": 23,
+        "content": "cabbage and seasonings like sugar",
+        "url":"https://www.marionskitchen.com/wp-content/uploads/2021/08/20201208_Express-Kimchi-5-1024x1024-1.jpeg"
+    }, 
+    "menu6":{
+        
+        "name": "Borscht",
+        "price": 15,
+        "content": "Meat, Potatoes, Rice,",
+        "url":"https://www.allrecipes.com/thmb/LTMiS5Tk0Uf63rMvtkzwB96Boec=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/84450-ukranian-red-borscht-soup-ddmfs-0266-3x4-hero-890c67fee10b4b0e828f152d22888a56.jpg"
+    }, 
+    "menu7":{
+      
+        "name": "Tagine",
+        "price": 30,
+        "content": "turmeric, cinnamon, saffron, ginger",
+        "url":"https://t4.ftcdn.net/jpg/03/21/48/45/360_F_321484510_GFuusqUrlpTLk6hPu5Ig1cNFqejMCNdJ.jpg"
+    }, 
+    "menu8":{
+       
+        "name": "Ravioli",
+        "price": 90,
+        "content": "Ricotta, Parmesan, mozzarella",
+        "url":"https://cook.fnr.sndimg.com/content/dam/images/cook/fullset/2014/2/7/0/CC_cheese-ravioli-with-marinara-sauce_s4x3.jpg.rend.hgtvcom.616.462.suffix/1391794585996.jpeg"
+    }, 
+    "menu9":{
+
+        "name": "Sushi",
+        "price": 73,
+        "content": "medium-grain white rice",
+        "url":"https://i.shgcdn.com/170776f5-8678-4b7b-aba7-9157fd1b5aab/-/format/auto/-/preview/3000x3000/-/quality/lighter/"
+    }
+    }
+  }
