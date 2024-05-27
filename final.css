@@ -377,9 +377,15 @@ header .div2  {
 
   .cook p{
     font-family: Dancing Script;
-    font-size: 40px;
-    margin-top: 180px;
+    font-size: 33px;
+    margin-top: 50px;
     color: rgb(201, 103, 33);
+  }
+
+  .cook h3{
+    font-size: 40px;
+    color: rgb(121, 57, 12);
+    margin-top: 40px;
   }
 
   .son2{

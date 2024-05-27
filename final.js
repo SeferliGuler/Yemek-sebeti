@@ -1,6 +1,5 @@
-
   
-    function loadFavorites() {
+    function downFav() {
         
         const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
         const favContainer = document.querySelector('.fav');
@@ -38,7 +37,7 @@
                     const input = lastFavDiv.querySelector(`#myInput-${menuData.id}`);
                     if (input && input.value > 0) {
                         input.value = parseInt(input.value) - 1;
-                        updateTotal();
+                        Sebet();
                     }
                 });
 
@@ -46,22 +45,22 @@
                     const input = lastFavDiv.querySelector(`#myInput-${menuData.id}`);
                     if (input) {
                         input.value = parseInt(input.value) + 1;
-                        updateTotal();
+                        Sebet();
                     }
                 });
 
                 sebetButton.addEventListener('click', () => {
                     lastFavDiv.remove();
-                    removeFromFavorites(menuData.id);
-                    updateTotal();
+                    clearFav(menuData.id);
+                    Sebet();
                 })
                 
             });
-            updateTotal();
+            Sebet();
         }
     }
 
-    function updateTotal() {
+    function Sebet() {
         const favDivs = document.querySelectorAll('.fav-div');
         let total = 0;
         favDivs.forEach(favDiv => {
@@ -78,7 +77,7 @@
         }
     }
 
-    function removeFromFavorites(id) {
+    function clearFav(id) {
         let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
         favorites = favorites.filter(menuData => menuData.id == id);
         localStorage.setItem('favorites', JSON.stringify(favorites));
@@ -93,11 +92,11 @@
         addedItemIds = addedItemIds.filter(itemId => itemId == id);
         localStorage.setItem('addedItemIds', JSON.stringify(addedItemIds));
 
-        updateTotal();
+        Sebet();
     }
 
 
-    function addToFavorites(menuData) {
+    function addFavorites(menuData) {
         const itemId = menuData.id;
         let addedItemIds = JSON.parse(localStorage.getItem('addedItemIds')) || [];
         if (!addedItemIds.includes(itemId)) {
@@ -111,7 +110,6 @@
 
 
     function Menu() {
-        const selectElement = document.querySelector('select');
         fetch('menu.json')
             .then(response => response.json())
             .then(data => {
@@ -136,37 +134,22 @@
                         const lastMenuDiv = fetchContainer.querySelector('.menu-div:last-child .favori');
                         if (lastMenuDiv) {
                             lastMenuDiv.addEventListener('click', () => {
-                                addToFavorites(menuData);
+                                addFavorites(menuData);
                                 lastMenuDiv.disabled = true;
                             });
                         }
                     }
-                    hideAddedItems();
+                   
                 }
             });
     }
 
-    // Eklenen öğeleri gizleme
-    // function hideAddedItems() {
-    //     const menuDivs = document.querySelectorAll('.menu-div');
-    //     const addedItemIds = JSON.parse(localStorage.getItem('addedItemIds')) || [];
-    //     menuDivs.forEach(menuDiv => {
-    //         const itemId = menuDiv.dataset.id;
-    //         if (addedItemIds.includes(itemId)) {
-    //             menuDiv.style.display = 'none';
-    //         } else {
-    //             menuDiv.style.display = 'block';
-    //         }
-    //     });
-    // }
+  
+    downFav();
 
-    // Sayfa yüklendiğinde favorileri yükle
-    loadFavorites();
-
-    // Menü verilerini yükle
     Menu();
 
-    // Favorileri temizleme
+    
     const clearButton = document.querySelector('.fav-clear');
     if (clearButton) {
         clearButton.addEventListener('click', function () {
@@ -176,11 +159,10 @@
             if (favContainer) {
                 favContainer.innerHTML = '';
             }
-            updateTotal();
+            Sebet();
         });
     }
 
-    // Menü kenar çubuğunu gizle/göster
     document.querySelector('.res').addEventListener('click', () => {
         if (document.querySelector('.menu').classList.contains('left')) {
             document.querySelector('.menu').classList.remove('left');
@@ -189,7 +171,6 @@
         }
     });
 
-    // İçerik değiştirme
     const selectElement = document.querySelector('select');
     if (selectElement) {
         selectElement.addEventListener('change', function () {
@@ -226,18 +207,19 @@
                                 const lastMenuDiv = fetchContainer.querySelector('.menu-div:last-child .favori');
                                 if (lastMenuDiv) {
                                     lastMenuDiv.addEventListener('click', () => {
-                                        addToFavorites(menuData);
+                                        addFavorites(menuData);
                                         lastMenuDiv.disabled = true;
                                     });
                                 }
                             }
-                            hideAddedItems();
+                          
                         }
                     })
                     .catch(error => console.error('error', error));
             }
         });
     }
+
 
 
 
